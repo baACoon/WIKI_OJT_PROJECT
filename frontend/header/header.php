@@ -5,23 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
-    <link rel="stylesheet" href="header.css"> 
+    <link rel="stylesheet" href="../header/header.css"> 
     <script defer src="script.js"></script> 
 </head>
 <body>
 
 <header>
     <nav class="navbar">
-        <!-- Logo -->
         <div class="logo">
             <a href="index.php">
-                <img src="logo.png" alt="Logo">
+                <img src="../images/SEC_LOGO.png" alt="Logo">
             </a>
         </div>
 
         <!-- Navigation Links -->
         <ul class="nav-links">
-            <li><a href="index.php" class="active">Home</a></li>
+            <li><a href="index.php" class="">Home</a></li>
             <li><a href="article.php">Article</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="contact.php">Contact Us</a></li>
