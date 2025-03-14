@@ -3,8 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins";
 }
+
+
 
 /* Navbar */
 .navbar {
@@ -12,19 +14,20 @@
     justify-content: space-between;
     align-items: center;
     background: #111;
-    padding: 10px 20px;
+    height: 80px;
+    padding: 10px 50px;
 }
 
 /* Logo */
 .logo img {
-    height: 40px;
+    height: 30px;
 }
 
 /* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 60px;
 }
 
 .nav-links li {
@@ -32,47 +35,82 @@
 }
 
 .nav-links a {
+    position: relative; /* Needed for the underline effect */
     text-decoration: none;
     color: white;
-    font-size: 16px;
-    transition: 0.3s;
+    font-size: 12px;
+    transition: color 0.3s;
 }
 
+/* Create the Underline Effect */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #0DE194; 
+    transition: width 0.3s ease-in-out;
+}
+
+/* Hover Effect - Slide Underline */
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Active Page Style */
 .nav-links a.active {
     font-weight: bold;
-    text-decoration: underline;
+    color: white;
+
 }
 
-.nav-links a:hover {
-    color: #1db954;
+/* Keep underline on active link */
+.nav-links a.active::after {
+    width: 100%;
 }
+
+
 
 /* Right-Side Elements */
 .nav-right {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 30px;
 }
+
+
 
 /* FAQs Button */
 .btn-faq {
-    background: green;
-    padding: 6px 12px;
-    color: white;
+    background: #FFDE59 ;
+    padding: 8px 20px;
+    color: black;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 /* Icons */
-.icon-btn {
+.user-btn {
     background: none;
     border: none;
     cursor: pointer;
+    color: white;
+    
 }
 
-.icon-btn img {
-    height: 30px;
+.user-btn i {
+    height: 100%;
+}
+
+.setting-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;   
 }
 
 /* Dropdown Menu */
@@ -135,7 +173,7 @@
 }
 
 input:checked + .slider {
-    background-color: green;
+    background-color: #005A32;
 }
 
 input:checked + .slider:before {

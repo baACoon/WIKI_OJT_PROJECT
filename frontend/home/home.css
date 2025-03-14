@@ -1,0 +1,59 @@
+
+
+.maincontent-page {
+    position: relative; /* Ensures child elements are positioned relative to this */
+    background-color: #1E1E1E;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../images/Maincover.jpg');
+    background-size: cover;
+    height:  90vh;
+    width: 100%;
+    display: flex; /* Centering text */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+/* Overlay */
+.maincontent-page::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(25, 105, 25, 0.5); /* Green overlay with 50% opacity */
+    pointer-events: none; /* Ensures it doesn’t interfere with clicks */
+    z-index: 1; /* Keeps it below the text */
+}
+
+/* Text Styling */
+.maincontent-page h1 {
+    position: relative; /* Places text above overlay */
+    color: white;
+    font-size: 5rem; /* Adjust as needed */
+    z-index: 2; /* Ensures text is above the overlay */
+    text-align: left;
+    width: 100%;
+}
+
+
+.maincontent-page h1 span {
+    color: #0CE093;
+}
+
+.maincontent-page p{
+    color: white;
+    text-align: left;
+    z-index: 2;
+    width: 100%;
+    word-spacing: 10px;
+    letter-spacing: 1px;
+    max-width: 670px;
+}
