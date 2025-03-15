@@ -3,10 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins";
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
-
-
 
 /* Navbar */
 .navbar {
@@ -14,13 +13,24 @@
     justify-content: space-between;
     align-items: center;
     background: #111;
-    height: 80px;
     padding: 10px 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Transparent Navbar Effect on Scroll */
+.navbar.scrolled {
+    background: rgba(17, 17, 17, 0.8); /* Slight transparency */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
 }
 
 /* Logo */
 .logo img {
-    height: 30px;
+    height: 35px;
 }
 
 /* Navigation Links */
@@ -35,14 +45,14 @@
 }
 
 .nav-links a {
-    position: relative; /* Needed for the underline effect */
+    position: relative;
     text-decoration: none;
     color: white;
     font-size: 12px;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Create the Underline Effect */
+/* Underline Effect */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -50,7 +60,7 @@
     bottom: -5px;
     width: 0;
     height: 2px;
-    background-color: #0DE194; 
+    background-color: #0DE194;
     transition: width 0.3s ease-in-out;
 }
 
@@ -63,15 +73,12 @@
 .nav-links a.active {
     font-weight: bold;
     color: white;
-
 }
 
 /* Keep underline on active link */
 .nav-links a.active::after {
     width: 100%;
 }
-
-
 
 /* Right-Side Elements */
 .nav-right {
@@ -80,102 +87,53 @@
     gap: 30px;
 }
 
-
-
 /* FAQs Button */
 .btn-faq {
-    background: #FFDE59 ;
-    padding: 8px 20px;
+    background: #FFDE59;
+    padding: 6px 15px;
     color: black;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 10px;
+    font-weight: normal;
 }
 
-/* Icons */
+/* User Icon Button */
 .user-btn {
     background: none;
     border: none;
     cursor: pointer;
     color: white;
-    
 }
 
-.user-btn i {
-    height: 100%;
+.user-btn img {
+    width: 20px;
 }
 
-.setting-btn{
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: white;   
-}
+/* Mobile Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px;
+    }
 
-/* Dropdown Menu */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
+    .nav-links {
+        gap: 30px;
+    }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    border-radius: 5px;
-    width: 150px;
-}
+    .nav-links a {
+        font-size: 10px;
+    }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+    .nav-right {
+        gap: 20px;
+    }
 
-/* Toggle Switch */
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-}
+    .btn-faq {
+        font-size: 9px;
+        padding: 5px 12px;
+    }
 
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: 0.4s;
-    border-radius: 20px;
-}
-
-.slider:before {
-    position: absolute;
-    content: "";
-    height: 14px;
-    width: 14px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: 0.4s;
-    border-radius: 50%;
-}
-
-input:checked + .slider {
-    background-color: #005A32;
-}
-
-input:checked + .slider:before {
-    transform: translateX(20px);
+    .user-btn img {
+        width: 18px;
+    }
 }

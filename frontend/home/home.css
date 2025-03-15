@@ -1,37 +1,49 @@
-
-
 .maincontent-page {
-    position: relative; /* Ensures child elements are positioned relative to this */
-    background-color: #1E1E1E;
+    position: relative;
+    background-color: #005A32;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('../images/Maincover.jpg');
     background-size: cover;
-    height:  90vh;
+    height: 100vh;
     width: 100%;
-    display: flex; /* Centering text */
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 100px;
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 30px;
+    overflow: hidden; /* Prevents blur from overflowing */
 }
 
-/* Overlay */
+/* Blurred Background */
 .maincontent-page::before {
-    content: ""; /* Required for pseudo-elements */
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(25, 105, 25, 0.5); /* Green overlay with 50% opacity */
-    pointer-events: none; /* Ensures it doesn’t interfere with clicks */
-    z-index: 1; /* Keeps it below the text */
+    background-image: url('../images/Maincover.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(2px); /* Adjust blur strength */
 }
+
+/* Dark Overlay */
+.maincontent-page::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Black overlay */
+    z-index: 0;
+}
+
 
 /* Text Styling */
 .maincontent-page h1 {
@@ -41,6 +53,8 @@
     z-index: 2; /* Ensures text is above the overlay */
     text-align: left;
     width: 100%;
+    margin-bottom: -20px;
+    font-weight: 300;
 }
 
 
@@ -52,8 +66,212 @@
     color: white;
     text-align: left;
     z-index: 2;
+    font-size: 12px;
+    line-height: 25px;
     width: 100%;
     word-spacing: 10px;
     letter-spacing: 1px;
+    font-weight: 300;
     max-width: 670px;
+}
+.pempasize{
+    font-style: italic;
+}
+
+
+/*-----featured-section------*/
+
+.featured-section{
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #1E1E1E;
+}
+.featured-section h4{
+    color: white;
+    margin-top: 2em;
+    font-weight: 6x00;
+
+}
+
+.headerarticle{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    margin-top: 3em;
+    padding: 0 130px;
+    max-width: 1500px;
+}
+
+
+hr{
+    width: 100%;
+    margin-top: 1em;
+}
+
+
+.searchcontainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.searchcontainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.searchcontainer input {
+    width: 100%;
+    height: 40px;
+    padding: 10px 40px; /* Adjusted for the icon */
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+.searchcontainer input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0px 0px 8px rgba(76, 175, 80, 0.5);
+}
+
+.searchcontainer label{
+    color: white;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.searchcontainer::placeholder{
+    font-size: 12px;
+}
+
+/* Search Icon */
+.searchcontainer i {
+    position: absolute;
+    left: 15px; /* Positioning inside the input */
+    font-size: 18px;
+    color: #888;
+}
+
+
+.featured-container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.container1,
+.container2,
+.container3{
+    background-color: white;
+    width: 25%;
+    height: 400px;
+    margin-top: 5em;
+}
+
+
+
+
+/*In the news section*/
+
+.inthenews-section{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-color: #1E1E1E;
+
+}
+
+.inthenews-container{
+    background-color: white;
+    height: 500px;
+    margin-top: 30px;
+    width: 80%;
+}
+
+/*qoutes-section*/
+
+.qoutes-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 50px;
+    align-items: center;
+    background-color: #1E1E1E;
+}
+
+.qoutescontainer{
+    margin-top: 60px;
+    width: 30%;
+    text-align: center;
+}
+
+.qoutescontainer h5{
+    color: white;
+    font-weight: 400;
+}
+
+.datecontainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 8em;
+}
+
+.date{
+    color: white;
+    font-size: 12px;
+    display: block;
+    text-align: right;
+    font-weight: 300;
+    
+}
+
+
+
+
+/*ANIMATION*/
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.maincontent-page h1,
+.maincontent-page p {
+    opacity: 0; /* Initially hidden */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.maincontent-page h1 {
+    animation-delay: 0.3s; /* Delay to make text appear sequentially */
+}
+
+.maincontent-page p {
+    animation-delay: 0.6s; /* Appears after h1 */
 }

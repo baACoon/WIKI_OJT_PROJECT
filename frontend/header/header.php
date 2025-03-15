@@ -23,7 +23,7 @@ $current_page = basename($_SERVER['REQUEST_URI'], ".php");
     <nav class="navbar">
         <div class="logo">
             <a href="../home/home.php">
-                <img src="../images/SEC_LOGO.png" alt="Logo">
+                <img src="../images/secpedia.png" alt="Logo">
             </a>
         </div>
 
@@ -38,19 +38,9 @@ $current_page = basename($_SERVER['REQUEST_URI'], ".php");
         <!-- Right-side Icons & Buttons -->
         <div class="nav-right">
             <a href="faqs.php" class="btn-faq">FAQs</a>
-            <button class="user-btn"><i class="fa-solid fa-circle-user"></i></button>
-            <div class="dropdown">
-                <button class="setting-btn">
-                    <i class="fa-solid fa-gear"></i>
-                </button>
-                <div class="dropdown-content">
-                    <p>Appearance</p>
-                    <label class="switch">
-                        <input type="checkbox" id="theme-toggle">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-            </div>
+            <button class="user-btn">
+                <img src="../images/user.png" alt="">
+            </button>
         </div>
     </nav>
 </header>
