@@ -69,7 +69,6 @@
     font-size: 12px;
     line-height: 25px;
     width: 100%;
-    word-spacing: 10px;
     letter-spacing: 1px;
     font-weight: 300;
     max-width: 670px;
@@ -91,7 +90,7 @@
 .featured-section h4{
     color: white;
     margin-top: 2em;
-    font-weight: 6x00;
+    font-weight: 400;
 
 }
 
@@ -208,6 +207,11 @@ hr{
     width: 80%;
 }
 
+.inthenews-section .headerarticle h4 {
+    color: white;
+    font-weight: 400;
+}
+
 /*qoutes-section*/
 
 .qoutes-section{
@@ -225,7 +229,7 @@ hr{
     text-align: center;
 }
 
-.qoutescontainer h5{
+.qoutescontainer h5, .qoutes-section .headerarticle h4{
     color: white;
     font-weight: 400;
 }

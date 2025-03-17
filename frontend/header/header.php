@@ -30,7 +30,7 @@ $current_page = basename($_SERVER['REQUEST_URI'], ".php");
         <!-- Navigation Links -->
         <ul class="nav-links">
             <li><a href="../home/home.php" class="<?= ($current_page == 'home') ? 'active' : '' ?>">Home</a></li>
-            <li><a href="../article/article.php" class="<?= ($current_page == 'article') ? 'active' : '' ?>">Article</a></li>
+            <li><a href="../article/article.php" class="<?= ($current_page == 'article') ? 'active' : '' ?>">Explore</a></li>
             <li><a href="../about/about.php" class="<?= ($current_page == 'about') ? 'active' : '' ?>">About</a></li>
             <li><a href="../contact/contact.php" class="<?= ($current_page == 'contact') ? 'active' : '' ?>">Contact Us</a></li>
         </ul>
