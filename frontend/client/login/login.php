@@ -28,20 +28,19 @@
                    </div>
                    <div class="sec-card-front-right">
                         <div class="fronttitle">
-                            <h1>Secpedia</h1>
-                            <p>Login</p>
+                            <h1><span>Sec</span>pedia</h1>
                         </div>
                         <form action="auth.php" method="POST">
                             <div class="userauth">
                                 <label for="">Username</label>
-                                <input type="text" name="username" placeholder="Username" required>
+                                <input type="text" name="username" placeholder="Enter your username" required>
                             </div>
                             <div class="passauth">
                                 <label for="">Password</label>
-                                <input type="password" name="password" placeholder="Password" required>
+                                <input type="password" name="password" placeholder="Enter your password" required>
                             </div>
-                            <button type="submit" name="login">Login</button>
                         </form>
+                        <button class="loginbtn" type="submit" name="login">Login</button>
                         <p>Don't have an account? <a href="#" id="sec-flip-to-register">Register</a></p>
 
                    </div>
@@ -50,17 +49,45 @@
                 <!-- Register Form -->
                 <div class="sec-card-back">
                     <div class="sec-card-back-left">
-                        <h2>Register</h2>
+                        <h1><span>Sec</span>pedia</h1>
                         <form action="auth.php" method="POST">
-                            <input type="text" name="new_username" placeholder="Username" required>
-                            <input type="password" name="new_password" placeholder="Password" required>
-                            <button type="submit" name="register">Register</button>
+
+                            <div class="userauth">
+                                <label for="">Email</label>
+                                <input type="text" name="email" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="userauth">
+                                <label for="">Username</label>
+                                <input type="text" name="username" placeholder="Enter your username" required>
+                            </div>  
+                            
+                            <div class="passauth">
+                                <label for="">Password</label>
+                                <input type="password" name="password" placeholder="Enter your password" required>
+                            </div>
+
+                            <div class="passauth">
+                                <label for="">Confirm Password</label>
+                                <input type="password" name="password" placeholder="Enter your password" required>
+                            </div>
+
+
                         </form>
+                        <button class="regbtn" type="submit" name="register">Register</button>
                         <p>Already have an account? <a href="#" id="sec-flip-to-login">Login</a></p>
                     </div>
 
                     <div class="sec-card-back-right">
-                        
+                    <div class="fronttitleleft">
+                            <h4>Securities<span> and</span></h4>
+                            <h4>Exchange</h4>
+                            <h4>Commission</h4>
+                            <h6>PHILIPPINES</h6>
+                         </div>
+                         <div class="frontimagelogo">
+                            <img src="../images/secpedia.png" alt="">
+                         </div>
                     </div>
                 </div>
             </div>
