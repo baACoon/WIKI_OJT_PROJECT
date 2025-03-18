@@ -1,5 +1,14 @@
 <?php include '../header/header.php'; ?>
+<?php
+session_start();
 
+// Check if the user is logged in
+if (!isset($_SESSION['username'])) {
+    // Redirect to login page if not logged in
+    header('Location: login.php');
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +25,7 @@
     <div id="myModal" class="modal">
         <div class="modal-content">
             <button class="close-btn">&times;</button>
-           z``
+           
           <div class="modalmaincontent">
             <div class="modalcontentleft">
                 <div class="modaltitle">
