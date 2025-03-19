@@ -33,7 +33,15 @@ include($_SERVER['DOCUMENT_ROOT'] . '/WIKI_OJT_PROJECT/backend/routes/user.php')
                         <div class="fronttitle">
                             <h1><span>Sec</span>pedia</h1>
                         </div>
-                        <form action="user.php" method="POST">
+                        <form action="/WIKI_OJT_PROJECT/backend/routes/user.php" method="POST">
+                            <?php 
+                            // Display error messages
+                                if (isset($_SESSION['errors'])) {
+                                    $errors = $_SESSION['errors']; 
+                                    unset($_SESSION['errors']); // Clear errors after displaying
+                                    include('errors.php'); 
+                                }
+                            ?>
                             <div class="userauth">
                                 <label for="">Username</label>
                                 <input type="text" name="username" placeholder="Enter your username" required>
@@ -42,9 +50,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/WIKI_OJT_PROJECT/backend/routes/user.php')
                                 <label for="">Password</label>
                                 <input type="password" name="password" placeholder="Enter your password" required>
                             </div>
+
                             <button class="loginbtn" type="submit" name="login_user">Login</button>
                         </form>
-
                         <p>Don't have an account? <a href="#" id="sec-flip-to-register">Register</a></p>
 
                    </div>
@@ -54,31 +62,35 @@ include($_SERVER['DOCUMENT_ROOT'] . '/WIKI_OJT_PROJECT/backend/routes/user.php')
                 <div class="sec-card-back">
                     <div class="sec-card-back-left">
                         <h1><span>Sec</span>pedia</h1>
-                        <form action="user.php" method="POST">
+                        <form action="/WIKI_OJT_PROJECT/backend/routes/user.php" method="POST">
                             <div class="userauth">
                                 <label for="">Email</label>
-                                <input type="text" name="email" placeholder="Enter your email" required>
+                                <input type="text" name="email" placeholder="Enter your email" value="<?php echo $email; ?>" required>
                             </div>
+
                             <div class="userauth">
                                 <label for="">Username</label>
-                                <input type="text" name="username" placeholder="Enter your username" required>
-                            </div>
+                                <input type="text" name="username" placeholder="Enter your username" value="<?php echo $username;?>" required>
+                            </div>  
+                            
                             <div class="passauth">
                                 <label for="">Password</label>
                                 <input type="password" name="password_1" placeholder="Enter your password" required>
                             </div>
+
                             <div class="passauth">
                                 <label for="">Confirm Password</label>
-                                <input type="password" name="password_2" placeholder="Confirm your password" required>
+                                <input type="password" name="password_2" placeholder="Enter your password" required>
                             </div>
-                            <button class="regbtn" type="submit" name="reg_user">Register</button>
-                        </form>
 
+                            <button class="regbtn" type="submit" name="reg_user">Register</button>
+
+                        </form>
                         <p>Already have an account? <a href="#" id="sec-flip-to-login">Login</a></p>
                     </div>
 
                     <div class="sec-card-back-right">
-                        <div class="fronttitleleft">
+                    <div class="fronttitleleft">
                             <h4>Securities<span> and</span></h4>
                             <h4>Exchange</h4>
                             <h4>Commission</h4>
