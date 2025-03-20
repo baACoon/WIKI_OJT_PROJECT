@@ -52,7 +52,7 @@ session_start();
     </div>
 
     <main class="maincontent-page">
-        <h1><span>SEC</span>PEDIA</h1>
+        <h1><span>SEC</span>PEDIAS</h1>
         <p>Welcome to <span class="pempasize">SECPEDIA</span>, the collaborative platform where you can learn, contribute, and share knowledge about business registration, compliance, investor protection, and SEC regulations.</p>
     </main>
 
