@@ -65,7 +65,7 @@ if (isset($_POST['reg_user'])) {
       $result = mysqli_query($db, $query);
       $_SESSION['username'] = $username;
       $_SESSION['success'] = "You are now logged in";
-      header('location: /WIKI_OJT_PROJECT/frontend/client/home.php');
+      header('location: /WIKI_OJT_PROJECT/frontend/client/home/home.php');
 ;
     }
   }
@@ -91,7 +91,7 @@ if (isset($_POST['reg_user'])) {
           case 1: // Successful login
               $_SESSION['username'] = $username;
               $_SESSION['success'] = "You are now logged in";
-              header('location: /WIKI_OJT_PROJECT/frontend/client/home.php');
+              header('location: /WIKI_OJT_PROJECT/frontend/client/home/home.php');
               exit();
   
           default: // Any other case, handle as an error
@@ -103,7 +103,7 @@ if (isset($_POST['reg_user'])) {
   // If there are errors, store them in session and redirect back
   if (!empty($errors)) {
     $_SESSION['errors'] = $errors;
-    header('location: /WIKI_OJT_PROJECT/frontend/client/home.php');
+    header('location: /WIKI_OJT_PROJECT/frontend/client/home/home.php');
     exit();
     
   }
