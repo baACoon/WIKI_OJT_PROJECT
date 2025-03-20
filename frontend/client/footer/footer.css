@@ -1,5 +1,56 @@
-footer{
-    height: 300px;
-    width: 100%;
-    background-color: black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
 }
+
+
+.footercontainer {
+    background: white;
+    padding: 10px 50px;
+    width: 100%;
+    position: relative; /* Change to 'fixed' if you want it always visible */
+    bottom: 0;
+    left: 0;
+    color: black;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footercontainer img{
+    width: 5%;
+}
+
+.iconsfooter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconsfooter ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+.iconsfooter li {
+    list-style: none;
+    gap: 20px;
+}
+
+.iconsfooter li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+

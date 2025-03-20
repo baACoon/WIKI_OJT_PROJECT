@@ -139,7 +139,7 @@
 </div>
 
 <div class="content-section hidden" id="newsSection">
-    <p>This is the News section content.</p>
+    <p>This is the News section content.</p>    
 </div>
 
 
@@ -148,4 +148,6 @@
     <script src="./swap.js"></script> <!-- External JavaScript file for modal functionality -->
 
 </body>
+<?php include '../footer/footer.php'; ?>
+
 </html>

@@ -1,5 +1,6 @@
 <?php include '../header/header.php'; ?>
 <?php
+
 session_start();
 
 
@@ -93,7 +94,8 @@ session_start();
         <p class="date">March 12, 2025</p>
     </div>
     </section>
-
+    
     <script src="./modal/modal.js"></script> <!-- External JavaScript file for modal functionality -->
 </body>
+<?php include '../footer/footer.php'; ?>
 </html>
